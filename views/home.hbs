@@ -1,0 +1,18 @@
+<h1>Calculator</h1>
+<form action="/" method="post">
+  <label for="number1">Number 1:</label>
+  <input type="number" step="0.1" id="number1" name="number1" required value="{{number1}}" />
+  <label for="operator">Operator:</label>
+  <select id="operator" name="operator">
+    <option value="+" {{#if operator_add}}selected{{/if}}>+</option>
+    <option value="-" {{#if operator_subtract}}selected{{/if}}>-</option>
+    <option value="*" {{#if operator_multiply}}selected{{/if}}>*</option>
+    <option value="/" {{#if operator_divide}}selected{{/if}}>/</option>
+  </select>
+
+  <label for="number2">Number 2:</label>
+  <input id="number2" type="number" step="0.1" name="number2" required value="{{number2}}" />
+  <label for="result">Result:</label>
+  <input id="result" disabled value="{{result}}"/>
+  <input type="submit" value="Caculate" />
+</form>
